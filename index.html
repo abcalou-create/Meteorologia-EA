@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estação Meteorológica IoT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-principal">Estação Meteorológica IoT</h1>
+        <p class="subtitulo">Monitoramento em tempo real de temperatura, umidade e pressão</p>
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card temp">
+                <h2>🌡 Temperatura</h2>
+                <p id="temp">-- °C</p>
+            </div>
+            <div class="card humidity">
+                <h2>💧 Umidade</h2>
+                <p id="umidade">-- %</p>
+            </div>
+            <div class="card pressure">
+                <h2>⚡ Pressão</h2>
+                <p id="pressao">-- hPa</p>
+            </div>
+        </section>
+
+        <section class="charts">
+            <canvas id="graficoTemp"></canvas>
+            <canvas id="graficoUmidade"></canvas>
+            <canvas id="graficoPressao"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Elisa e André • Protótipo de Estação Meteorológica IoT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
